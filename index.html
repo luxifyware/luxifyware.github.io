@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>LuxifyWare — Minecraft 1.8x Internal Cheat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description"
+    content="LuxifyWare — Minecraft 1.8x İç Hile. Son oyuncu hile, bedwars hile, pvp hile, Minecraft cheat, internal cheat.">
+  <meta name="keywords"
+    content="minecraft hile, minecraft cheat, son oyuncu hile, bedwars hile, pvp hile, internal cheat, minecraft 1.8, luxifyware, reach, killaura, aimassist">
+  <meta name="robots" content="index, follow">
+
+  <!-- OG Tags -->
+  <meta property="og:site_name" content="LuxifyWare">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LuxifyWare — Minecraft 1.8x Internal Cheat">
+  <meta property="og:description" content="Premium Minecraft 1.8x internal cheat. Fast, undetected & powerful.">
+  <meta property="og:url" content="https://luxifyware.github.io">
+  <meta property="og:image" content="https://luxifyware.github.io/resources/images/favicon.png">
+  <meta name="theme-color" content="#7c3aed">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LuxifyWare">
+  <meta name="twitter:description" content="Premium Minecraft 1.8x internal cheat.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="resources/images/favicon.png">
+  <link rel="shortcut icon" href="resources/images/favicon.png">
+  <link rel="apple-touch-icon" href="resources/images/favicon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="resources/css/main.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader-container" id="loader">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- THEME TOGGLE (top right) -->
+  <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+    <i class="fas fa-sun" id="theme-icon"></i>
+  </button>
+
+  <!-- TITLE MODE BUTTONS (left side) -->
+  <div class="mode-buttons" id="mode-buttons">
+    <button class="mode-btn active" data-mode="0" title="Standard">
+      <i class="fas fa-circle"></i>
+    </button>
+    <button class="mode-btn" data-mode="1" title="RGB Rainbow">
+      <i class="fas fa-palette"></i>
+    </button>
+    <button class="mode-btn" data-mode="2" title="Glitch">
+      <i class="fas fa-bolt"></i>
+    </button>
+  </div>
+
+  <!-- SITE -->
+  <div class="site" id="site">
+    <div class="content">
+
+      <!-- HERO -->
+      <header>
+        <div class="hero" id="hero">
+          <div class="hero-badge"><span></span>Minecraft 1.8x</div>
+          <div class="hero-title" id="hero-title">
+            <a href="/" id="title-text">LuxifyWare</a>
+          </div>
+          <p class="hero-subtitle">Premium <a href="https://www.minecraft.net/">Minecraft</a> internal cheat — fast,
+            undetected &amp; powerful.</p>
+          <div class="hero-actions">
+            <a href="https://discord.gg/ZgkA7QZBDy" class="btn btn-discord">
+              <i class="fab fa-discord"></i> Join Discord
+            </a>
+          </div>
+          <!-- Scroll hint -->
+          <div class="scroll-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- NAV -->
+      <nav class="navbar" id="Navigation">
+        <div class="nav-inner">
+          <a href="/">Home</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://discord.gg/ZgkA7QZBDy">Discord</a>
+        </div>
+      </nav>
+
+      <!-- SHOWCASE VIDEO -->
+      <section class="section-alt" id="showcase-section">
+        <span class="section-label">Preview</span>
+        <h2 class="section-title">Showcase</h2>
+        <div class="showcase-wrapper">
+          <video class="showcase-video" autoplay muted loop playsinline>
+            <source src="resources/videos/showcase.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <!-- ANNOUNCEMENTS -->
+      <section class="section-dark" id="announcements-section">
+        <span class="section-label">News</span>
+        <h2 class="section-title">Announcements</h2>
+        <div class="announcement-card">
+          <strong>Welcome to LuxifyWare</strong>
+          <p>
+            Our website is live! Join our Discord server for support, setup help, and the latest updates.<br><br>
+            The default menu key is <span class="accent-text">INSERT</span> — can be changed in menu settings.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-alt" id="faq">
+        <span class="section-label">Help</span>
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q"><i class="fas fa-chevron-right"></i> How do I open the menu?</div>
+            <div class="faq-a">Press <span class="accent-text">INSERT</span> to open the in-game menu.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><i class="fas fa-chevron-right"></i> How do I inject / use it?</div>
+            <div class="faq-a">Join our <a href="https://discord.gg/ZgkA7QZBDy">Discord</a> for a detailed setup guide.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><i class="fas fa-chevron-right"></i> Is it detected?</div>
+            <div class="faq-a">LuxifyWare is regularly updated to stay undetected. Check Discord for the latest status.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><i class="fas fa-chevron-right"></i> I need support.</div>
+            <div class="faq-a">Open our <a href="https://discord.gg/ZgkA7QZBDy">Discord server</a> and create a support
+              ticket.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEVELOPERS -->
+      <section class="section-dark">
+        <span class="section-label">Team</span>
+        <h2 class="section-title">Developers</h2>
+        <div class="dev-grid">
+          <div class="dev-card">
+            <a href="https://www.youtube.com/@elcirot">
+              <img alt="Elcirot" title="Elcirot" src="resources/images/developers/Elcirot.jpg">
+            </a>
+            <h3><a href="https://www.youtube.com/@elcirot">Elcirot</a></h3>
+            <span class="role">Owner</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <a href="/">LuxifyWare &copy; 2025</a>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // ── LOADER ──────────────────────────────────────────
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => loader.style.display = 'none', 500);
+    });
+
+    // ── PARTICLES ────────────────────────────────────────
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    const particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    for (let i = 0; i < 65; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 1.6 + 0.3,
+        dx: (Math.random() - 0.5) * 0.3,
+        dy: (Math.random() - 0.5) * 0.3,
+        alpha: Math.random() * 0.4 + 0.1,
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(167,139,250,${p.alpha})`;
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // ── FAQ ACCORDION ────────────────────────────────────
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+
+    // ── THEME TOGGLE ─────────────────────────────────────
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    themeBtn.addEventListener('click', () => {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+    });
+
+    // ── TITLE MODE BUTTONS ───────────────────────────────
+    const titleEl = document.getElementById('title-text');
+    const modeButtons = document.querySelectorAll('.mode-btn');
+    let currentMode = 0;
+
+    function applyMode(mode) {
+      titleEl.className = '';
+      titleEl.style = '';
+      if (mode === 0) {
+        // Standard: gradient
+        titleEl.classList.add('title-standard');
+      } else if (mode === 1) {
+        // RGB rainbow
+        titleEl.classList.add('title-rgb');
+      } else if (mode === 2) {
+        // Glitch
+        titleEl.classList.add('title-glitch');
+        titleEl.setAttribute('data-text', 'LuxifyWare');
+      }
+    }
+
+    modeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentMode = parseInt(btn.dataset.mode);
+        applyMode(currentMode);
+      });
+    });
+
+    // Initialize with standard mode
+    applyMode(0);
+  </script>
+</body>
+
+</html>
