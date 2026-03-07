@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>luxifyware x1.8 INTERNAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description"
+    content="LuxifyWare — Minecraft 1.8x İç Hile. Son oyuncu hile, bedwars hile, pvp hile, Minecraft cheat, internal cheat.">
+  <meta name="keywords"
+    content="minecraft hile, minecraft cheat, son oyuncu hile, bedwars hile, pvp hile, internal cheat, minecraft 1.8, luxifyware, reach, killaura, aimassist">
+  <meta name="robots" content="index, follow">
+
+  <!-- OG Tags -->
+  <meta property="og:site_name" content="LuxifyWare">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LuxifyWare — Minecraft 1.8x Internal Cheat">
+  <meta property="og:description" content="Premium Minecraft 1.8x internal cheat. Fast, undetected & powerful.">
+  <meta property="og:url" content="https://luxifyware.github.io">
+  <meta property="og:image" content="https://luxifyware.github.io/resources/images/favicon.png">
+  <meta name="theme-color" content="#7c3aed">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LuxifyWare">
+  <meta name="twitter:description" content="Premium Minecraft 1.8x internal cheat.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="resources/images/favicon.png">
+  <link rel="shortcut icon" href="resources/images/favicon.png">
+  <link rel="apple-touch-icon" href="resources/images/favicon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="resources/css/main.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader-container" id="loader">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- THEME & LANG TOGGLE (top right) -->
+  <div class="top-controls">
+    <button class="lang-toggle" id="lang-toggle" title="Change Language">
+      <span id="lang-label">TR</span>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+  </div>
+
+  <!-- TITLE MODE BUTTONS (left side) -->
+  <div class="mode-buttons" id="mode-buttons">
+    <button class="mode-btn active" data-mode="0" title="Standard">
+      <i class="fas fa-circle"></i>
+    </button>
+    <button class="mode-btn" data-mode="1" title="RGB Rainbow">
+      <i class="fas fa-palette"></i>
+    </button>
+    <button class="mode-btn" data-mode="2" title="Glitch">
+      <i class="fas fa-bolt"></i>
+    </button>
+  </div>
+
+  <!-- SITE -->
+  <div class="site" id="site">
+    <div class="content">
+
+      <!-- HERO -->
+      <header>
+        <div class="hero" id="hero">
+          <div class="hero-badge"><span></span>Minecraft 1.8x</div>
+          <div class="hero-title" id="hero-title">
+            <a href="/" id="title-text">LuxifyWare</a>
+          </div>
+          <p class="hero-subtitle">Premium <a href="https://www.minecraft.net/">Minecraft</a>
+            internal cheat — fast,
+            undetected &amp; powerful.</p>
+          <div class="hero-actions">
+            <a href="https://discord.gg/ZgkA7QZBDy" class="btn btn-discord">
+              <i class="fab fa-discord"></i> <span data-i18n="join_discord">Discord'a Katıl</span>
+            </a>
+          </div>
+          <!-- Scroll hint -->
+          <div class="scroll-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- NAV -->
+      <nav class="navbar" id="Navigation">
+        <div class="nav-inner">
+          <a href="/" data-i18n="nav_home">Ana Sayfa</a>
+          <a href="#faq" data-i18n="nav_faq">SSS</a>
+          <a href="https://discord.gg/ZgkA7QZBDy" data-i18n="nav_discord">Discord</a>
+        </div>
+      </nav>
+
+      <!-- SHOWCASE VIDEO -->
+      <section class="section-alt" id="showcase-section">
+        <span class="section-label" data-i18n="label_preview">Preview</span>
+        <h2 class="section-title" data-i18n="title_showcase">Showcase</h2>
+        <div class="showcase-wrapper">
+          <video class="showcase-video" autoplay muted loop playsinline>
+            <source src="resources/videos/showcase.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <!-- ANNOUNCEMENTS -->
+      <section class="section-dark" id="announcements-section">
+        <span class="section-label" data-i18n="label_news">Haberler</span>
+        <h2 class="section-title" data-i18n="title_announcements">Duyurular</h2>
+        <div class="announcement-card">
+          <strong data-i18n="ann_title">LuxifyWare'e Hoş Geldiniz</strong>
+          <p data-i18n="ann_text">
+            Web sitemiz yayında! Destek, kurulum yardımı ve en son güncellemeler için Discord sunucumuza
+            katılın.<br><br>
+            Varsayılan menü tuşu <span class="accent-text">INSERT</span> — menü ayarlarından değiştirilebilir.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-alt" id="faq">
+        <span class="section-label" data-i18n="label_help">Yardım</span>
+        <h2 class="section-title" data-i18n="title_faq">Sıkça Sorulan Sorular</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" data-i18n="faq_q1"><i class="fas fa-chevron-right"></i> Menüyü nasıl açarım?</div>
+            <div class="faq-a" data-i18n="faq_a1">Oyun içinde menüyü açmak için <span class="accent-text">INSERT</span>
+              tuşuna basın.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" data-i18n="faq_q2"><i class="fas fa-chevron-right"></i> Nasıl enjekte ederim /
+              kullanırım?</div>
+            <div class="faq-a" data-i18n="faq_a2">Detaylı kurulum rehberi için <a
+                href="https://discord.gg/ZgkA7QZBDy">Discord</a> sunucumuza katılın.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" data-i18n="faq_q3"><i class="fas fa-chevron-right"></i> Tespit ediliyor mu?</div>
+            <div class="faq-a" data-i18n="faq_a3">LuxifyWare tespit edilmemek için düzenli olarak güncellenir. En son
+              durum için Discord'u kontrol edin.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" data-i18n="faq_q4"><i class="fas fa-chevron-right"></i> Desteğe ihtiyacım var.</div>
+            <div class="faq-a" data-i18n="faq_a4"><a href="https://discord.gg/ZgkA7QZBDy">Discord sunucumuzu</a> açın ve
+              bir destek talebi oluşturun.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEVELOPERS -->
+      <section class="section-dark">
+        <span class="section-label">Team</span>
+        <h2 class="section-title">Developers</h2>
+        <div class="dev-grid">
+          <div class="dev-card">
+            <a href="https://www.youtube.com/@elcirot">
+              <img alt="Elcirot" title="Elcirot" src="resources/images/developers/Elcirot.jpg">
+            </a>
+            <h3><a href="https://www.youtube.com/@elcirot">Elcirot</a></h3>
+            <span class="role">Owner</span>
+          </div>
+          <div class="dev-card">
+            <a href="https://guns.lol/noavaxd" target="_blank">
+              <img alt="Noava" title="Noava" src="resources/images/developers/Noava.jpg">
+            </a>
+            <h3><a href="https://guns.lol/noavaxd" target="_blank">Noava</a></h3>
+            <span class="role">Owner</span>
+          </div>
+        </div>
+        <div class="dev-signature">
+          <a href="https://cheatglobal.com" target="_blank">
+            <img src="resources/images/developers/brand_logo.png.png" alt="CheatGlobal Signature">
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <a href="/">LuxifyWare &copy; 2025</a>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // ── I18N ───────────────────────────────────────────
+    const translations = {
+      tr: {
+        join_discord: 'Discord\'a Katıl',
+        nav_home: 'Ana Sayfa',
+        nav_faq: 'SSS',
+        nav_discord: 'Discord',
+        label_preview: 'Önizleme',
+        title_showcase: 'Tanıtım',
+        label_news: 'Haberler',
+        title_announcements: 'Duyurular',
+        ann_title: 'LuxifyWare\'e Hoş Geldiniz',
+        ann_text: 'Web sitemiz yayında! Destek, kurulum yardımı ve en son güncellemeler için Discord sunucumuza katılın.<br><br>Varsayılan menü tuşu <span class="accent-text">INSERT</span> — menü ayarlarından değiştirilebilir.',
+        label_help: 'Yardım',
+        title_faq: 'Sıkça Sorulan Sorular',
+        faq_q1: '<i class="fas fa-chevron-right"></i> Menüyü nasıl açarım?',
+        faq_a1: 'Oyun içinde menüyü açmak için <span class="accent-text">INSERT</span> tuşuna basın.',
+        faq_q2: '<i class="fas fa-chevron-right"></i> Nasıl enjekte ederim / kullanırım?',
+        faq_a2: 'Detaylı kurulum rehberi için <a href="https://discord.gg/ZgkA7QZBDy">Discord</a> sunucumuza katılın.',
+        faq_q3: '<i class="fas fa-chevron-right"></i> Tespit ediliyor mu?',
+        faq_a3: 'LuxifyWare tespit edilmemek için düzenli olarak güncellenir. En son durum için Discord\'u kontrol edin.',
+        faq_q4: '<i class="fas fa-chevron-right"></i> Desteğe ihtiyacım var.',
+        faq_a4: '<a href="https://discord.gg/ZgkA7QZBDy">Discord sunucumuzu</a> açın ve bir destek talebi oluşturun.'
+      },
+      en: {
+        join_discord: 'Join Discord',
+        nav_home: 'Home',
+        nav_faq: 'FAQ',
+        nav_discord: 'Discord',
+        label_preview: 'Preview',
+        title_showcase: 'Showcase',
+        label_news: 'News',
+        title_announcements: 'Announcements',
+        ann_title: 'Welcome to LuxifyWare',
+        ann_text: 'Our website is live! Join our Discord server for support, setup help, and the latest updates.<br><br>The default menu key is <span class="accent-text">INSERT</span> — can be changed in menu settings.',
+        label_help: 'Help',
+        title_faq: 'FAQ',
+        faq_q1: '<i class="fas fa-chevron-right"></i> How do I open the menu?',
+        faq_a1: 'Press <span class="accent-text">INSERT</span> to open the in-game menu.',
+        faq_q2: '<i class="fas fa-chevron-right"></i> How do I inject / use it?',
+        faq_a2: 'Join our <a href="https://discord.gg/ZgkA7QZBDy">Discord</a> for a detailed setup guide.',
+        faq_q3: '<i class="fas fa-chevron-right"></i> Is it detected?',
+        faq_a3: 'LuxifyWare is regularly updated to stay undetected. Check Discord for the latest status.',
+        faq_q4: '<i class="fas fa-chevron-right"></i> I need support.',
+        faq_a4: 'Open our <a href="https://discord.gg/ZgkA7QZBDy">Discord server</a> and create a support ticket.'
+      }
+    };
+
+    let currentLang = localStorage.getItem('luxify_lang') || 'tr';
+    const langBtn = document.getElementById('lang-toggle');
+    const langLabel = document.getElementById('lang-label');
+
+    function updateLanguage() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.innerHTML = translations[currentLang][key];
+        }
+      });
+      langLabel.innerText = currentLang.toUpperCase();
+      localStorage.setItem('luxify_lang', currentLang);
+    }
+
+    langBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      updateLanguage();
+    });
+
+    // Initialize Language
+    updateLanguage();
+
+    // ── LOADER ──────────────────────────────────────────
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => loader.style.display = 'none', 500);
+    });
+
+    // ── PARTICLES ────────────────────────────────────────
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    const particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    for (let i = 0; i < 65; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 1.6 + 0.3,
+        dx: (Math.random() - 0.5) * 0.3,
+        dy: (Math.random() - 0.5) * 0.3,
+        alpha: Math.random() * 0.4 + 0.1,
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `${p.colorBase || 'rgba(167,139,250,'}${p.alpha})`;
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // ── FAQ ACCORDION ────────────────────────────────────
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+
+    // ── THEME TOGGLE ─────────────────────────────────────
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    themeBtn.addEventListener('click', () => {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+    });
+
+    // ── TITLE MODE BUTTONS ───────────────────────────────
+    const titleEl = document.getElementById('title-text');
+    const modeButtons = document.querySelectorAll('.mode-btn');
+    let currentMode = 0;
+
+    function applyMode(mode) {
+      document.documentElement.setAttribute('data-site-mode', mode);
+      titleEl.className = '';
+      titleEl.style = '';
+
+      if (mode === 0) {
+        titleEl.classList.add('title-standard');
+        updateParticleColor('rgba(167,139,250,');
+      } else if (mode === 1) {
+        titleEl.classList.add('title-rgb');
+        updateParticleColor('rgba(255,255,255,'); // Multi-color via CSS filter
+      } else if (mode === 2) {
+        titleEl.classList.add('title-glitch');
+        titleEl.setAttribute('data-text', 'luxifyware x1.8 INTERNAL');
+        updateParticleColor('rgba(0,255,255,');
+      }
+    }
+
+    function updateParticleColor(base) {
+      particles.forEach(p => {
+        p.colorBase = base;
+      });
+    }
+
+    modeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentMode = parseInt(btn.dataset.mode);
+        applyMode(currentMode);
+      });
+    });
+
+    // Initialize with standard mode
+    applyMode(0);
+  </script>
+</body>
+
+</html>
