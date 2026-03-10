@@ -210,8 +210,75 @@
     </div>
   </div>
 
+  <!-- MUSIC PLAYER -->
+  <div class="music-player" id="music-player">
+    <div class="mp-visualizer">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="mp-info">
+      <span class="mp-title">Luxify</span>
+      <div class="mp-progress-bg">
+        <div class="mp-progress-bar" id="mp-progress"></div>
+      </div>
+    </div>
+    <button class="mp-toggle" id="mp-toggle" title="Play/Pause">
+      <i class="fas fa-play" id="mp-icon"></i>
+    </button>
+    <audio id="bg-music" src="resources/music/music.mp3" loop autoplay></audio>
+  </div>
+
   <!-- SCRIPTS -->
   <script>
+    // ── MUSIC PLAYER ─────────────────────────────────────
+    const music = document.getElementById('bg-music');
+    const mpToggle = document.getElementById('mp-toggle');
+    const mpIcon = document.getElementById('mp-icon');
+    const mpProgress = document.getElementById('mp-progress');
+    const mpVisualizer = document.querySelector('.mp-visualizer');
+    
+    let isPlaying = false;
+
+    // Function to set playing state UI
+    function setPlaying(playing) {
+      isPlaying = playing;
+      if (playing) {
+        mpIcon.className = 'fas fa-pause';
+        mpVisualizer.classList.add('playing');
+      } else {
+        mpIcon.className = 'fas fa-play';
+        mpVisualizer.classList.remove('playing');
+      }
+    }
+
+    mpToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        setPlaying(false);
+      } else {
+        music.play().then(() => setPlaying(true)).catch(e => console.log("Audio play failed:", e));
+      }
+    });
+
+    // Check if autoplay worked
+    music.play().then(() => {
+      setPlaying(true);
+    }).catch(() => {
+      console.log("Autoplay blocked, waiting for interaction.");
+    });
+
+    music.addEventListener('timeupdate', () => {
+      const percent = (music.currentTime / music.duration) * 100;
+      mpProgress.style.width = percent + '%';
+    });
+
+    // Try auto-play on first click anywhere (browser restriction)
+    document.addEventListener('click', () => {
+        if (!isPlaying && music.paused) {
+            // Optional: uncomment if you want it to start on first click anywhere
+            // mpToggle.click(); 
+        }
+    }, { once: true });
+
     // ── I18N ───────────────────────────────────────────
     const translations = {
       tr: {
